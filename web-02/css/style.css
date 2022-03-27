@@ -91,7 +91,6 @@ header > img {
 
 .grid-body {
   display: grid;
-  transition: all 1s;
   gap: 2vmin;
   grid-template-rows: 45vmin 20vmin 30vmin 30vmin 30vmin 20vmin minmax(
       10vmin,
@@ -114,7 +113,6 @@ header > img {
 
 .grid-menu {
   display: grid;
-  transition: all 1s;
   gap: 2vmin;
   grid-template-rows: 10vmin 2vmin 2vmin;
   grid-template-areas:
@@ -130,7 +128,6 @@ header > img {
 
 .grid-main {
   display: grid;
-  transition: all 1s;
   gap: 2vmin;
   grid-template-rows: auto;
   grid-template-areas:
@@ -151,7 +148,6 @@ header > img {
 
   .grid-body {
     max-width: 100%;
-    transition: all 1s;
     max-height: 100%;
     display: grid;
     gap: 2vmin;
@@ -165,7 +161,6 @@ header > img {
   }
   .grid-menu {
     display: grid;
-    transition: all 1s;
     gap: 2vmin;
     grid-template-rows: auto 2vmin 2vmin;
     grid-template-areas:
@@ -176,7 +171,6 @@ header > img {
 
   .grid-main {
     display: grid;
-    transition: all 1s;
     gap: 2vmin;
     grid-template-rows: auto;
     grid-template-areas:
@@ -197,7 +191,6 @@ header > img {
   }
   .grid-body {
     display: grid;
-    transition: all 1s;
     gap: 2vmin;
     grid-template-columns: 30% 30% auto;
     grid-template-rows: 20vmin 30vmin 20vmin 30vmin;
@@ -209,7 +202,6 @@ header > img {
   }
   .grid-menu {
     display: grid;
-    transition: all 1s;
     gap: 2vmin;
     grid-template-rows: auto 2vmin 2vmin;
     grid-template-areas:
@@ -220,11 +212,23 @@ header > img {
 
   .grid-main {
     display: grid;
-    transition: all 1s;
     gap: 2vmin;
     grid-template-rows: auto;
     grid-template-areas:
       'div-four'
       'div-five';
+  }
+}
+
+.fade {
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
