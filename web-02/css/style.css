@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+  margin: 3vmin;
+}
+
+body {
+  text-align: center;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/**#####################################
+##### class for grid area body #########
+########################################
+*/
+
+.header {
+  grid-area: header;
+  background-color: #60269e;
+}
+
+header > img {
+  margin: 4vmin;
+  width: 55vmin;
+}
+
+.grid-menu {
+  grid-area: grid-menu;
+}
+
+.div-one {
+  grid-area: div-one;
+  background-color: #c2a6e1;
+}
+
+.div-two {
+  grid-area: div-two;
+  background-color: #c2a6e1;
+}
+
+.div-three {
+  grid-area: div-three;
+  background-color: #c2a6e1;
+}
+
+.section-one {
+  grid-area: section-one;
+  background-color: #96daea;
+}
+
+.section-two {
+  grid-area: section-two;
+  background-color: #00b2e3;
+}
+
+.grid-main {
+  grid-area: grid-main;
+}
+
+.div-four {
+  grid-area: div-four;
+  background-color: #ace7ff;
+}
+
+.div-five {
+  grid-area: div-five;
+  background-color: #ace7ff;
+}
+
+.section-three {
+  grid-area: section-three;
+  background-color: #1226aa;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #9164cc;
+}
+
+/**#####################################
+##### grid body #######################
+########################################
+*/
+
+.grid-body {
+  display: grid;
+  transition: all 1s;
+  gap: 2vmin;
+  grid-template-rows: 45vmin 20vmin 30vmin 30vmin 30vmin 20vmin minmax(
+      10vmin,
+      auto
+    );
+  grid-template-areas:
+    'header'
+    'grid-menu'
+    'section-one'
+    'section-two'
+    'grid-main'
+    'section-three'
+    'footer';
+}
+
+/**#####################################
+##### grid menu #######################
+########################################
+*/
+
+.grid-menu {
+  display: grid;
+  transition: all 1s;
+  gap: 2vmin;
+  grid-template-rows: 10vmin 2vmin 2vmin;
+  grid-template-areas:
+    'div-one'
+    'div-two'
+    'div-three';
+}
+
+/**#####################################
+##### grid main #######################
+########################################
+*/
+
+.grid-main {
+  display: grid;
+  transition: all 1s;
+  gap: 2vmin;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'div-four'
+    'div-five';
+}
+
+/**#####################################
+##### media query 500px #######################
+########################################
+*/
+
+@media (min-width: 600px) {
+  header > img {
+    margin: 4vmin;
+    width: 40vmin;
+  }
+
+  .grid-body {
+    max-width: 100%;
+    transition: all 1s;
+    max-height: 100%;
+    display: grid;
+    gap: 2vmin;
+    grid-template-columns: 50% auto;
+    grid-template-rows: 30vmin 30vmin 20vmin auto;
+    grid-template-areas:
+      'header       grid-menu'
+      'section-one  section-two'
+      'grid-main    section-three'
+      'footer       footer ';
+  }
+  .grid-menu {
+    display: grid;
+    transition: all 1s;
+    gap: 2vmin;
+    grid-template-rows: auto 2vmin 2vmin;
+    grid-template-areas:
+      'div-one'
+      'div-two'
+      'div-three';
+  }
+
+  .grid-main {
+    display: grid;
+    transition: all 1s;
+    gap: 2vmin;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'div-four'
+      'div-five';
+  }
+}
+
+/**#####################################
+##### media query 900px #######################
+########################################
+*/
+
+@media (min-width: 900px) {
+  header > img {
+    margin: 1vmin;
+    width: 30vmin;
+  }
+  .grid-body {
+    display: grid;
+    transition: all 1s;
+    gap: 2vmin;
+    grid-template-columns: 30% 30% auto;
+    grid-template-rows: 20vmin 30vmin 20vmin 30vmin;
+    grid-template-areas:
+      'header           grid-menu       grid-menu'
+      'section-one      section-two     grid-main'
+      'section-three    section-three   section-three'
+      'footer           footer          footer ';
+  }
+  .grid-menu {
+    display: grid;
+    transition: all 1s;
+    gap: 2vmin;
+    grid-template-rows: auto 2vmin 2vmin;
+    grid-template-areas:
+      'div-one'
+      'div-two'
+      'div-three';
+  }
+
+  .grid-main {
+    display: grid;
+    transition: all 1s;
+    gap: 2vmin;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'div-four'
+      'div-five';
+  }
+}
